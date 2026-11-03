@@ -1,0 +1,33 @@
+backend: pytorch
+dtype: bfloat16
+model_kwargs:
+  torch_dtype: bfloat16
+tensor_parallel_size: 1
+pipeline_parallel_size: 1
+attn_backend: FLASHINFER
+max_batch_size: 16
+max_num_tokens: 1024
+max_seq_len: 1536
+enable_chunked_prefill: true
+disable_overlap_scheduler: false
+cuda_graph_config:
+  batch_sizes:
+  - 1
+  - 2
+  - 4
+  - 8
+  - 16
+  enable_padding: true
+kv_cache_config:
+  dtype: auto
+  max_tokens: 24576
+  free_gpu_memory_fraction: 0.9
+  enable_block_reuse: false
+  host_cache_size: 0
+  use_uvm: false
+enable_iter_perf_stats: true
+enable_iter_req_stats: true
+prefill_cuda_graph_backend: breakable
+prefill_capture_num_tokens:
+- 128
+disable_mm_encoder: true

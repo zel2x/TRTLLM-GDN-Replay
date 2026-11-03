@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "upstream": {
+    "url": "https://github.com/NVIDIA/TensorRT-LLM.git",
+    "commit": "b96ba434e8a05e2ab52d2082bd8d70b1d844739b"
+  },
+  "packages": {
+    "tensorrt_llm": "1.4.0rc2.dev202610260007",
+    "torch": "2.14.0+cu132",
+    "flashinfer-python": "0.6.18"
+  },
+  "python": [
+    3,
+    12
+  ],
+  "model": {
+    "id": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+  },
+  "base_files": {
+    "tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py": "fbb786e566a6d0d1898a022d70f5b54d80f46e5cf2a59746ca4aa74bfd4dfdb4",
+    "tensorrt_llm/_torch/modules/mamba/gdn_mixer.py": "efe0e7c2e085fec437b8b24b1cfcf14deebd728d1c3ce5afe3edb8c589513393"
+  },
+  "flashinfer": {
+    "file": "flashinfer/gdn_kernels/delta_rule_dsl/delta_rule_sm120.py",
+    "sha256": "a01735f2a006e6738731860f7af1bf78f8e5be2d8aad51edb99e7efcc7f961ef"
+  },
+  "snapshots": {
+    "initial": {
+      "patches": [
+        "patches/prefill-replay.patch"
+      ],
+      "files": {
+        "tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py": "c23f616b4f182f8c5e3a4f72cca2ffaf7806f6866d313b4a9da930f5835c6472",
+        "tensorrt_llm/_torch/modules/mamba/gdn_mixer.py": "b90bdfd209d182c54696d86d50f1f3899a47c7174ed0c906e89c30abe403bbab",
+        "tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py": "a8033b881eae2d726a36452517bd492c4b9b9624d34b3cb9d1ca3bed70deaa5a"
+      }
+    },
+    "prefill1024": {
+      "patches": [
+        "patches/prefill-replay.patch",
+        "patches/prefill-1024.patch"
+      ],
+      "files": {
+        "tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py": "c23f616b4f182f8c5e3a4f72cca2ffaf7806f6866d313b4a9da930f5835c6472",
+        "tensorrt_llm/_torch/modules/mamba/gdn_mixer.py": "b90bdfd209d182c54696d86d50f1f3899a47c7174ed0c906e89c30abe403bbab",
+        "tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py": "e5832eaab2d44fd572b3ccd684864e391e350aed6a11667bab4b3f013a49821e"
+      },
+      "runtime_config": "benchmarks/runtime-1024.yaml"
+    }
+  },
+  "input_files": {
+    "patches/prefill-1024.patch": "3e69516b85ec461f37e1a5e3d000f64a7c943d36ce4d87b151947e8cc230a563",
+    "patches/prefill-replay.patch": "4cd25dfe6184eb4492c817f09b84c0bf0ce9be7cc0b52d19e857d4293cbbd06e",
+    "tools/common.py": "ae35bcc61da7b1b15a56b867037780c137da32140545171114c9bfbb1e6bf90b",
+    "tools/fetch_upstream.py": "7174f3c0dfe53b4f0941505c5172d112e43d5860bd624526a0ad24613752eea1",
+    "tools/prepare_candidate.py": "82e95cdbe4c5b95792c510e7acbac1857f04c838d261eee2a7df7efff54111da",
+    "tools/run.py": "791248b4ba24cc842d92f78536cdcf2db519a22b2b55cc9e90804ce945573052",
+    "tools/verify.py": "ac2a33ab7af42dbed63dfc9e859cfdd04cbcc37f0ff65b1e303ab431ab58d197",
+    "benchmarks/analyze.py": "f18f2acb089ba804f9b8a03f1767dc9d79fa548cd69a7c5b079b1ea176a73f2d",
+    "benchmarks/benchmark_cli.py": "10d09fdd28996c88e6a33d60282f00ffd0c1fbe62d986544bf1434b9367de5ef",
+    "benchmarks/capture_nsys.py": "fef02c086ebac0aa19f91a88f4cb5ccf262eedb1f3ccdef3a44956c6b96f2916",
+    "benchmarks/client.py": "6c6cffbc308f666793dd73ed37b131713ddc68351292cfcce8b65083fca6bb5e",
+    "benchmarks/fixtures/batched-200.jsonl": "a21d5f55456ee62b9799482402c0d622394458c7fcf090774ddb61d31f9073f8",
+    "benchmarks/fixtures/c1-200.jsonl": "de9057a338a2d03d90a0fae2b222084759b2363087a8ad92bb9d6323222f5aad",
+    "benchmarks/fixtures/long-200.jsonl": "22384943c1225b5fc6f3532511e2c8d1d94e69eed6863d4c5eab24392d0e746b",
+    "benchmarks/fixtures/long-32.jsonl": "eb59cf750bd5c3f51ed68b84a86399316268135f38adb79ef40259eb8183abb6",
+    "benchmarks/fixtures/long-warmup.jsonl": "7061c70729dc94e26dbc730d939b511a33fc48069a8b11fa03edef8c8842f7aa",
+    "benchmarks/fixtures/short-50.jsonl": "09a3077e017904d793b46d5a642bdabef3271589cb323a21d1e3c5d91fe7eaeb",
+    "benchmarks/fixtures/short-warmup.jsonl": "d200a25ef868cf709ec19716df5ac19f11b86006f7844810abe41d910673089d",
+    "benchmarks/presets/c1-1024.json": "506c39e0992ceeb4d821ced4d77305d53f4b585f7cce288819614cf422c790a0",
+    "benchmarks/presets/c1.json": "1f475746aac25653dd398fbac23162c667977dbec30d5b8ac7d99d309848c07a",
+    "benchmarks/presets/c8-1024.json": "75ae00d0c6210967a7ffa4d93f5fa9dc86311f3646ac1113fdc3ec637d4607d2",
+    "benchmarks/presets/c8-cohort.json": "0d6c6534205b1ce34dcb67b1893aa72e1fc768c356acbe864d9c561a8e25a874",
+    "benchmarks/presets/c8-long.json": "427fc37b888f3c65bec21fc83aa3997342573bbb378035af9462f2c635f013f6",
+    "benchmarks/presets/c8-short.json": "d9c21930aaf286c3a09b9e57c93310bf303d31a1043763870c975b6c2b7da0e0",
+    "benchmarks/run.py": "29257885fc984b6777e43faf183f127267959ae7d30a22f58e246f27fce28e6a",
+    "benchmarks/runner.py": "020114283396254428faaa49125f34d8d46af0bf7d9dc8b86f2c8079341f901a",
+    "benchmarks/runtime-1024.yaml": "218e880f410c057e07d39ac80309ef437eb550da92a1b249f5c5f3d5f044f81b",
+    "benchmarks/runtime.yaml": "952ded0d05ede54b7d952300d2901d95825309d48dd89d46f70d9246c709d026",
+    "benchmarks/support/cohort_arrivals.py": "3d2f02b42ca02d601454df00d84aea5c273d2f69ebd24e0e9e8ab6030db4247d",
+    "benchmarks/support/coverage_validator.py": "8a9ed93415babff5719204ad01c2944fbdb6099460fbd3436fba2a67e5a11968",
+    "benchmarks/support/diag_probe.py": "7b4d3e74b29c9535bed69ebf0a2828153fd3e1b0fe789db9d68b86ab5ce6194f",
+    "benchmarks/support/fi_launch_control.py": "044ef5bbece36ac989bc79380612b2cde2b0f0114a572e0021548962c24abdd8",
+    "benchmarks/support/sampling_audit.py": "70ee3329f0f2164cd3bddeb1e9be010cf263b550aab50de94df3b8fba3d16370",
+    "benchmarks/support/server_entry.py": "849d7dd61bef0e5e70e7ab0ba95c0d85fc2d071d4e214c0941abba3fd643915d",
+    "benchmarks/hooks/sitecustomize.py": "64ed5ad2665409eadb2ceb7f0ffe2d9d132e4213da94c9e663ae5b7e7834374c",
+    "benchmarks/support/profile_hooks.py": "bab9fa9d0cfe991d26596eab6ee94beb9f20c31a4f77fca11963e777f8699a04"
+  },
+  "cuda_toolkit_release": "13.2",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_HUB_DISABLE_TELEMETRY": "1",
+    "TRTLLM_NO_USAGE_STATS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUNBUFFERED": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "MAX_JOBS": "1",
+    "NO_PROXY": "127.0.0.1,localhost",
+    "no_proxy": "127.0.0.1,localhost"
+  },
+  "benchmark_files": {
+    "tensorrt_llm/serve/scripts/benchmark_serving.py": "7ed58b711aaf35d572500dd9922bf9123a38188312dd90fbdbb217cb386a4a57"
+  }
+}

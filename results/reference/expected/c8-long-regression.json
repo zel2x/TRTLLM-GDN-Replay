@@ -1,0 +1,315 @@
+{
+  "independent_process_pairs": 5,
+  "requests_each_arm_per_pair": 200,
+  "primary_CI": "t interval of paired relative-percent changes, df4; approximate distributional assumption; bootstrap sensitivity reported separately",
+  "p99_safety_decision": "inconclusive",
+  "metrics": {
+    "mean_ttft_ms": {
+      "paired_percent_changes": [
+        -15.352565773430483,
+        1.180572825683246,
+        10.038302076232375,
+        3.06719004449425,
+        -11.933943469660802
+      ],
+      "mean_percent_change": -2.6000888593362825,
+      "primary_t95_CI": [
+        -15.855788165372616,
+        10.655610446700052
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -10.9848901490916,
+        5.478311413427299
+      ],
+      "point_guard_pass": true
+    },
+    "p50_ttft_ms": {
+      "paired_percent_changes": [
+        -19.07203096899972,
+        -11.180932134969279,
+        16.078730575941712,
+        -12.409274830843886,
+        -17.280978604507848
+      ],
+      "mean_percent_change": -8.772897192675805,
+      "primary_t95_CI": [
+        -26.497459223710045,
+        8.951664838358434
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -17.135600729295255,
+        3.954856197669602
+      ],
+      "point_guard_pass": true
+    },
+    "p95_ttft_ms": {
+      "paired_percent_changes": [
+        -9.481813843314256,
+        31.34786141692887,
+        15.060749461910937,
+        33.15439871226682,
+        1.116496588554261
+      ],
+      "mean_percent_change": 14.239538467269325,
+      "primary_t95_CI": [
+        -8.873911152801165,
+        37.35298808733982
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -0.3339770095218107,
+        28.813053944060464
+      ],
+      "point_guard_pass": false
+    },
+    "p99_ttft_ms": {
+      "paired_percent_changes": [
+        16.30206743619482,
+        69.3331147773266,
+        12.969295387087087,
+        40.632215387763246,
+        28.094391417611874
+      ],
+      "mean_percent_change": 33.46621688119673,
+      "primary_t95_CI": [
+        5.142569469388651,
+        61.78986429300481
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        17.327423412835138,
+        52.84135293338432
+      ],
+      "point_guard_pass": false
+    },
+    "mean_tpot_ms": {
+      "paired_percent_changes": [
+        0.3091846072206694,
+        2.1507044858946056,
+        5.398702852006276,
+        -0.2989035294664433,
+        2.371912156622069
+      ],
+      "mean_percent_change": 1.9863201144554354,
+      "primary_t95_CI": [
+        -0.7800483387694124,
+        4.752688567680283
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        0.35687723508868174,
+        3.7754410639723135
+      ],
+      "point_guard_pass": true
+    },
+    "p50_tpot_ms": {
+      "paired_percent_changes": [
+        -1.0297643960291203,
+        1.6469317114208737,
+        6.12022048142562,
+        0.12405395395598262,
+        2.4613358430664256
+      ],
+      "mean_percent_change": 1.8645555187679563,
+      "primary_t95_CI": [
+        -1.531379888664552,
+        5.260490926200465
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -0.10078067821299053,
+        4.026329421930743
+      ],
+      "point_guard_pass": true
+    },
+    "p95_tpot_ms": {
+      "paired_percent_changes": [
+        0.1068861490245876,
+        3.7758358186075425,
+        8.005145928165923,
+        1.7698572088560516,
+        6.208852298134526
+      ],
+      "mean_percent_change": 3.9733154805577264,
+      "primary_t95_CI": [
+        -0.006638148572329694,
+        7.953269109687783
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        1.5058645068737642,
+        6.440766454241689
+      ],
+      "point_guard_pass": true
+    },
+    "p99_tpot_ms": {
+      "paired_percent_changes": [
+        -1.0566908274493358,
+        3.623393218668558,
+        10.429369492311192,
+        4.678348117753428,
+        1.1704085387105545
+      ],
+      "mean_percent_change": 3.768965707998879,
+      "primary_t95_CI": [
+        -1.6165007418658992,
+        9.154432157863658
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        0.535736834823195,
+        7.216382046862538
+      ],
+      "point_guard_pass": true
+    },
+    "mean_e2el_ms": {
+      "paired_percent_changes": [
+        -1.4614110419929327,
+        2.0471046102091606,
+        5.901230656432488,
+        0.04837532071320094,
+        0.7208231192221026
+      ],
+      "mean_percent_change": 1.4512245329168039,
+      "primary_t95_CI": [
+        -2.013359890897267,
+        4.915808956730874
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -0.4577506390112873,
+        3.829067641548334
+      ],
+      "point_guard_pass": true
+    },
+    "p50_e2el_ms": {
+      "paired_percent_changes": [
+        -0.9790815439115863,
+        1.7179327670250766,
+        5.782179724051484,
+        -0.7605661904850347,
+        0.15305463614248005
+      ],
+      "mean_percent_change": 1.182703878564484,
+      "primary_t95_CI": [
+        -2.2712340253944094,
+        4.636641782523377
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -0.6652481665301524,
+        3.6170780790535884
+      ],
+      "point_guard_pass": true
+    },
+    "p95_e2el_ms": {
+      "paired_percent_changes": [
+        -1.9578219151753617,
+        5.482930311613399,
+        12.11235387544165,
+        4.739729399553516,
+        3.3111109763452884
+      ],
+      "mean_percent_change": 4.737660529555699,
+      "primary_t95_CI": [
+        -1.5264716447152828,
+        11.00179270382668
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        0.7211986107161894,
+        9.026220582856727
+      ],
+      "point_guard_pass": true
+    },
+    "p99_e2el_ms": {
+      "paired_percent_changes": [
+        1.4111673970156335,
+        12.8966102937357,
+        9.494072672410535,
+        4.7072463126537345,
+        3.1790822279303743
+      ],
+      "mean_percent_change": 6.337635780749196,
+      "primary_t95_CI": [
+        0.45157341457317735,
+        12.223698146925214
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        2.77754911250915,
+        10.272597156309601
+      ],
+      "point_guard_pass": false
+    },
+    "mean_itl_ms": {
+      "paired_percent_changes": [
+        0.309184988873934,
+        2.1507074412240534,
+        5.398709143661118,
+        -0.2989015071895973,
+        2.3719143042706614
+      ],
+      "mean_percent_change": 1.9863228741680339,
+      "primary_t95_CI": [
+        -0.7800480203639233,
+        4.7526937686999915
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        0.3568789543151607,
+        3.77544534482559
+      ],
+      "point_guard_pass": true
+    },
+    "p95_itl_ms": {
+      "paired_percent_changes": [
+        1.7213158253833294,
+        0.213096874043317,
+        7.4009307360154875,
+        -4.0865046169790915,
+        2.0781510240382994
+      ],
+      "mean_percent_change": 1.4653979685002683,
+      "primary_t95_CI": [
+        -3.6564995052857516,
+        6.587295442286289
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -1.7633764400341232,
+        4.898808021225616
+      ],
+      "point_guard_pass": true
+    },
+    "p99_itl_ms": {
+      "paired_percent_changes": [
+        1.5022715646863638,
+        2.4196665913579274,
+        15.467831767073914,
+        -5.175966860477321,
+        2.291511375670874
+      ],
+      "mean_percent_change": 3.3010628876623516,
+      "primary_t95_CI": [
+        -6.009802841823137,
+        12.61192861714784
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -2.188975566018043,
+        10.065086691453207
+      ],
+      "point_guard_pass": true
+    },
+    "output_throughput": {
+      "paired_percent_changes": [
+        1.4952402145454347,
+        -2.0015741456046676,
+        -5.592848935833883,
+        -0.028102307061628196,
+        -0.7167738788103839
+      ],
+      "mean_percent_change": -1.3688118105530256,
+      "primary_t95_CI": [
+        -4.692920916305401,
+        1.9552972951993501
+      ],
+      "sensitivity_paired_bootstrap95_CI": [
+        -3.6424189130244837,
+        0.49120883819400163
+      ],
+      "point_guard_pass": true
+    }
+  },
+  "other_mean_point_guards_pass": false,
+  "original_single_pair_excluded_from_confirmatory_estimate_but_preserved": true,
+  "no_repeating_until_pass": true
+}

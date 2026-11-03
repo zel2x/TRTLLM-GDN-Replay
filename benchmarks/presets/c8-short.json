@@ -1,0 +1,19 @@
+{
+  "name": "c8-short",
+  "snapshot": "initial",
+  "warmup": 8,
+  "measured": 50,
+  "pairs": 1,
+  "concurrency": 8,
+  "request_rate": "inf",
+  "arrival": "closed_loop",
+  "seed": 17,
+  "output_tokens": 128,
+  "warmup_fixture": "short-warmup.jsonl",
+  "measured_fixture": "short-50.jsonl",
+  "effect_method": "percent",
+  "collect_stats": true,
+  "profile": {
+    "capture_seconds": 60
+  }
+}

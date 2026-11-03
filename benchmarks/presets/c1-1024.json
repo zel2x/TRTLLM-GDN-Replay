@@ -1,0 +1,28 @@
+{
+  "name": "c1-1024",
+  "snapshot": "prefill1024",
+  "warmup": 8,
+  "measured": 200,
+  "pairs": 1,
+  "concurrency": 1,
+  "request_rate": "inf",
+  "arrival": "closed_loop",
+  "seed": 17,
+  "output_tokens": 128,
+  "warmup_fixture": "long-warmup.jsonl",
+  "measured_fixture": "long-200.jsonl",
+  "effect_method": "percent",
+  "collect_stats": false,
+  "profile": {
+    "capture_seconds": 60,
+    "measured": 32,
+    "measured_fixture": "long-32.jsonl"
+  },
+  "allow_zero_replay": false,
+  "runtime_config": "benchmarks/runtime-1024.yaml",
+  "capture_sizes": [
+    128,
+    1024
+  ],
+  "require_replay_tokens": 1024
+}

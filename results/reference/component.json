@@ -1,0 +1,1264 @@
+{
+  "state": "complete",
+  "pid": 36663,
+  "started_unix": 1793138154.0925243,
+  "cases": [
+    {
+      "case": 1,
+      "name": "fresh_state",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "live_GDN_plans": 1
+    },
+    {
+      "case": 2,
+      "name": "reused_state",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ]
+    },
+    {
+      "case": 3,
+      "name": "eager_1024_prefix_graph_128_reused_tail",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "state_reset_between_chunks": false
+    },
+    {
+      "case": 4,
+      "name": "slot_reuse_without_intermediate_sync",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "iterations": 3
+    },
+    {
+      "case": 5,
+      "name": "slot_permutation",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "slots": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "case": 6,
+      "name": "changed_input_contents_same_storage",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ]
+    },
+    {
+      "case": 7,
+      "name": "tokens_127_eager_fallback",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "candidate_GDN_plans": 0
+    },
+    {
+      "case": 8,
+      "name": "tokens_129_eager_fallback",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "candidate_GDN_plans": 0
+    },
+    {
+      "case": 9,
+      "name": "batch_2_guard",
+      "passed": true,
+      "routing_only": true,
+      "builder_returned_none": true,
+      "inner_not_invoked": true
+    },
+    {
+      "case": 10,
+      "name": "batch_8_guard",
+      "passed": true,
+      "routing_only": true,
+      "builder_returned_none": true,
+      "inner_not_invoked": true
+    },
+    {
+      "case": 11,
+      "name": "batch_16_guard",
+      "passed": true,
+      "routing_only": true,
+      "builder_returned_none": true,
+      "inner_not_invoked": true
+    },
+    {
+      "case": 12,
+      "name": "FP16_guard",
+      "passed": true,
+      "routing_only": true,
+      "builder_returned_none": true,
+      "inner_not_invoked": true
+    },
+    {
+      "case": 13,
+      "name": "unsupported_stride_guard",
+      "passed": true,
+      "routing_only": true,
+      "builder_returned_none": true,
+      "inner_not_invoked": true
+    },
+    {
+      "case": 14,
+      "name": "speculation_guard",
+      "passed": true,
+      "routing_only": true,
+      "builder_returned_none": true,
+      "inner_not_invoked": true
+    },
+    {
+      "case": 15,
+      "name": "changed_cache_storage_numeric_fallback",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ]
+    },
+    {
+      "case": 16,
+      "name": "same_stream",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "device_sync_between_producer_and_replay": false
+    },
+    {
+      "case": 17,
+      "name": "nondefault_stream",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "device_sync_between_producer_and_replay": false
+    },
+    {
+      "case": 18,
+      "name": "producer_consumer_event",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ],
+      "device_sync_between_producer_and_replay": false
+    },
+    {
+      "case": 19,
+      "name": "parent_reset_GC",
+      "passed": true,
+      "plans_released": 1
+    },
+    {
+      "case": 20,
+      "name": "recapture_after_reset",
+      "passed": true,
+      "checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ]
+    },
+    {
+      "case": 21,
+      "name": "repeated_manager_replacement",
+      "passed": true,
+      "replacements": [
+        {
+          "retired_manager_collected": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        },
+        {
+          "retired_manager_collected": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        },
+        {
+          "retired_manager_collected": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": 22,
+      "name": "child_capture_exception_cleanup",
+      "passed": true,
+      "propagated_exception": "InjectedCaptureFailure",
+      "child_plans_released": true,
+      "recovery_capture_checks": [
+        {
+          "output": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "conv": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "state": {
+            "nrmse": 0.0,
+            "max_abs": 0.0,
+            "finite": true,
+            "allclose": true,
+            "pass": true
+          },
+          "unselected_conv_unchanged": true,
+          "unselected_state_unchanged": true,
+          "pass": true,
+          "active_FP32_workspace": [
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            },
+            {
+              "nrmse": 0.0,
+              "max_abs": 0.0,
+              "finite": true,
+              "allclose": true,
+              "pass": true
+            }
+          ],
+          "untouched_pool_rows_byte_equal": true
+        }
+      ]
+    },
+    {
+      "case": 23,
+      "name": "repeated_teardown",
+      "passed": true,
+      "cycles": [
+        {
+          "iteration": 0,
+          "plans_released": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        },
+        {
+          "iteration": 1,
+          "plans_released": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "plans_released": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "plans_released": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        },
+        {
+          "iteration": 4,
+          "plans_released": true,
+          "checks": [
+            {
+              "output": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "conv": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "state": {
+                "nrmse": 0.0,
+                "max_abs": 0.0,
+                "finite": true,
+                "allclose": true,
+                "pass": true
+              },
+              "unselected_conv_unchanged": true,
+              "unselected_state_unchanged": true,
+              "pass": true,
+              "active_FP32_workspace": [
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                },
+                {
+                  "nrmse": 0.0,
+                  "max_abs": 0.0,
+                  "finite": true,
+                  "allclose": true,
+                  "pass": true
+                }
+              ],
+              "untouched_pool_rows_byte_equal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": 24,
+      "name": "retained_plan_and_live_allocation_bound",
+      "passed": true,
+      "baseline_allocated_bytes": 128877568,
+      "maximum_growth_bytes": 0,
+      "samples": [
+        {
+          "iteration": 0,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 1,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 2,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 3,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 4,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 5,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 6,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 7,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 8,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        },
+        {
+          "iteration": 9,
+          "allocated_bytes": 128877568,
+          "reserved_bytes": 199229440
+        }
+      ],
+      "reserved_memory_is_not_a_leak_assertion": true
+    }
+  ],
+  "expected_cases": 24,
+  "numerical_kernels_changed": false,
+  "model_inference": false,
+  "max_live_allocation_growth_bytes": 1048576,
+  "representative_layer": 0,
+  "scope": "Real pinned layer parameters; executor/scheduler excluded; batch/dtype/stride/spec guards routing-only.",
+  "module_paths": {
+    "tensorrt_llm._torch.modules.mamba.gdn_mixer": "tensorrt_llm/_torch/modules/mamba/gdn_mixer.py",
+    "tensorrt_llm._torch.modules.mamba.gdn_prefill_graph": "tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py",
+    "tensorrt_llm._torch.pyexecutor.breakable_cuda_graph.breakable_cuda_graph": "tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py"
+  },
+  "packages": {
+    "torch": "2.14.0+cu132",
+    "tensorrt_llm": "1.4.0rc2.dev202610260007",
+    "flashinfer-python": "0.6.18"
+  },
+  "FI_control": {
+    "calls": 171,
+    "hits": 170,
+    "misses": 1
+  },
+  "peak_allocated_bytes": 239791104,
+  "peak_reserved_bytes": 429916160,
+  "ended_unix": 1793138200.8102202,
+  "wall_s": 46.71769618988037
+}

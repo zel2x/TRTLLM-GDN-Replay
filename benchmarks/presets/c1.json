@@ -1,0 +1,19 @@
+{
+  "name": "c1",
+  "snapshot": "initial",
+  "warmup": 8,
+  "measured": 200,
+  "pairs": 5,
+  "concurrency": 1,
+  "request_rate": "inf",
+  "arrival": "closed_loop",
+  "seed": 17,
+  "output_tokens": 128,
+  "warmup_fixture": "short-warmup.jsonl",
+  "measured_fixture": "c1-200.jsonl",
+  "effect_method": "log_ratio",
+  "collect_stats": false,
+  "profile": {
+    "capture_seconds": 300
+  }
+}

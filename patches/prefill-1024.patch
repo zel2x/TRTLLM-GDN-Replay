@@ -1,0 +1,39 @@
+diff --git a/tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py b/tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py
+--- a/tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py
++++ b/tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py
+@@ -54,8 +54,11 @@
+     manager = metadata.kv_cache_manager
+     counts = (metadata.num_contexts, metadata.num_ctx_tokens, metadata.num_tokens,
+               metadata.seq_lens.shape[0], mixed_qkv.shape[0])
+-    # Initial prototype domain. Other layouts retain the original eager break.
+-    if (counts != (1, 128, 128, 1, 128) or speculative is not None
++    # Only these initialization-time pure-prefill sizes may replay.
++    tokens = metadata.num_ctx_tokens
++    if (tokens not in (128, 1024)
++            or counts != (1, tokens, tokens, 1, tokens)
++            or speculative is not None
+             or str(mixed_qkv.dtype) != 'torch.bfloat16'
+             or not mixed_qkv.is_cuda
+             or tuple(mixed_qkv.stride()) not in ((6144, 1), (8192, 1))
+@@ -63,9 +66,9 @@
+             or tuple(b.stride()) not in ((16, 1), (32, 1))
+             or a.dtype != mixed_qkv.dtype or b.dtype != mixed_qkv.dtype
+             or a.device != mixed_qkv.device or b.device != mixed_qkv.device
+-            or output.shape != (1, 128, 16, 128)
+-            or mixed_qkv.shape != (128, 6144)
+-            or a.shape != (128, 16) or b.shape != (128, 16)):
++            or output.shape != (1, tokens, 16, 128)
++            or mixed_qkv.shape != (tokens, 6144)
++            or a.shape != (tokens, 16) or b.shape != (tokens, 16)):
+         return None, manager
+     cache = manager.mamba_layer_cache(layer.layer_idx)
+     mamba = metadata.mamba_metadata
+@@ -82,7 +85,7 @@
+ def build_gdn_replay(capture, args, kwargs, inner, resolver):
+     """Build during parent capture, never on a live-request cache miss.
+ 
+-    Args are the existing fixed CUDA buffers for one BF16 128-token prefill.
++    Args are the existing fixed CUDA buffers for one BF16 128- or 1024-token prefill.
+     Metadata values such as slot indices and initial-state flags remain GPU
+     inputs; the guard checks storage/ownership, not frozen request values.
+     """

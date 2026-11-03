@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "candidate": {
+    "variant": "candidate",
+    "requests": 24,
+    "warmup": 8,
+    "checked": 16,
+    "teacher_forced_positions": 128,
+    "partial_callbacks": 4,
+    "mean_next_token_loss": 2.649909503341803,
+    "performance_use_prohibited": true,
+    "all_forced_histories_match": true,
+    "max_logit_NRMSE": 0,
+    "relative_mean_loss_increase": 0.0,
+    "raw_top1_agreement": 128
+  },
+  "replays": 54,
+  "fallbacks": 0
+}

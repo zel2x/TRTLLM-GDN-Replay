@@ -1,0 +1,159 @@
+diff --git a/tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py b/tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py
+--- a/tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py
++++ b/tensorrt_llm/_torch/pyexecutor/breakable_cuda_graph/breakable_cuda_graph.py
+@@ -153,7 +153,7 @@
+     return source
+
+
+-def eager_on_graph(inner: Callable) -> Callable:
++def eager_on_graph(inner: Callable, *, replay_builder: Optional[Callable] = None) -> Callable:
+     """Run a callable eagerly between captured CUDA graph segments."""
+
+     @functools.wraps(inner)
+@@ -179,7 +179,13 @@
+             new_output = inner(*captured_args, **captured_kwargs)
+             return _copy_output(captured_output, new_output)
+
+-        capture.cuda_graph._break_functions.append(replay_fn)
++        built_replay = (
++            replay_builder(capture, captured_args, captured_kwargs)
++            if replay_builder is not None else None
++        )
++        capture.cuda_graph._break_functions.append(
++            replay_fn if built_replay is None else built_replay
++        )
+         capture._begin_new_segment()
+         return output
+
+diff --git a/tensorrt_llm/_torch/modules/mamba/gdn_mixer.py b/tensorrt_llm/_torch/modules/mamba/gdn_mixer.py
+--- a/tensorrt_llm/_torch/modules/mamba/gdn_mixer.py
++++ b/tensorrt_llm/_torch/modules/mamba/gdn_mixer.py
+@@ -132,7 +132,17 @@
+     )
+
+
+-maybe_bcg_gdn_custom_op_inplace = eager_on_graph(gdn_custom_op_inplace)
++def _build_gdn_graph_replay(capture, args, kwargs):
++    from .gdn_prefill_graph import build_gdn_replay
++
++    return build_gdn_replay(
++        capture, args, kwargs, gdn_custom_op_inplace, _extract_gdn_extra_attrs
++    )
++
++
++maybe_bcg_gdn_custom_op_inplace = eager_on_graph(
++    gdn_custom_op_inplace, replay_builder=_build_gdn_graph_replay
++)
+
+
+ def ensure_divisibility(numerator, denominator):
+diff --git a/tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py b/tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py
+new file mode 100644
+--- /dev/null
++++ b/tensorrt_llm/_torch/modules/mamba/gdn_prefill_graph.py
+@@ -0,0 +1,105 @@
++# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES.
++# SPDX-License-Identifier: Apache-2.0
++"""Private, parent-owned replay for fixed-shape pure-prefill GDN regions."""
++from dataclasses import dataclass
++from typing import Callable
++import weakref
++
++
++@dataclass(frozen=True)
++class _ReplaySignature:
++    layer_id: int
++    manager_id: int
++    counts: tuple[int, ...]
++    bindings: tuple[tuple, ...]
++
++
++class _GuardedReplay:
++    """Replay only while live metadata and buffer ownership still match."""
++
++    def __init__(self, signature, owner, graph, probe, fallback) -> None:
++        self._signature = signature
++        self._owner = weakref.ref(owner)
++        self._graph = graph
++        self._probe = probe
++        self._fallback = fallback
++        self.replays = 0
++        self.fallbacks = 0
++
++    def __call__(self) -> None:
++        current, owner = self._probe()
++        if self._graph is None or owner is not self._owner() or current != self._signature:
++            self.fallbacks += 1
++            return self._fallback()
++        self.replays += 1
++        self._graph.replay()
++        return None
++
++    def close(self) -> None:
++        if self._graph is not None:
++            self._graph.reset()
++            self._graph = None
++
++
++def _tensor_key(tensor) -> tuple:
++    if tensor is None:
++        return ()
++    return (tensor.data_ptr(), tuple(tensor.shape), tuple(tensor.stride()),
++            str(tensor.dtype), str(tensor.device))
++
++
++def _binding(args, resolver):
++    mixed_qkv, a, b, layer_idx, output = args
++    metadata, layer, speculative = resolver(layer_idx)
++    manager = metadata.kv_cache_manager
++    counts = (metadata.num_contexts, metadata.num_ctx_tokens, metadata.num_tokens,
++              metadata.seq_lens.shape[0], mixed_qkv.shape[0])
++    # Initial prototype domain. Other layouts retain the original eager break.
++    if (counts != (1, 128, 128, 1, 128) or speculative is not None
++            or str(mixed_qkv.dtype) != 'torch.bfloat16'
++            or not mixed_qkv.is_cuda
++            or tuple(mixed_qkv.stride()) not in ((6144, 1), (8192, 1))
++            or tuple(a.stride()) not in ((16, 1), (32, 1))
++            or tuple(b.stride()) not in ((16, 1), (32, 1))
++            or a.dtype != mixed_qkv.dtype or b.dtype != mixed_qkv.dtype
++            or a.device != mixed_qkv.device or b.device != mixed_qkv.device
++            or output.shape != (1, 128, 16, 128)
++            or mixed_qkv.shape != (128, 6144)
++            or a.shape != (128, 16) or b.shape != (128, 16)):
++        return None, manager
++    cache = manager.mamba_layer_cache(layer.layer_idx)
++    mamba = metadata.mamba_metadata
++    workspace = layer._get_prefill_state_workspace(metadata, cache.temporal)
++    tensors = (mixed_qkv, a, b, output, cache.conv, cache.temporal,
++               mamba.has_initial_states, mamba.state_indices,
++               mamba.query_start_loc, mamba.query_start_loc_long,
++               layer.conv1d.weight, layer.conv1d.bias, layer.A_log, layer.dt_bias,
++               *(workspace or ()))
++    return _ReplaySignature(id(layer), id(manager), counts,
++                            tuple(_tensor_key(t) for t in tensors)), manager
++
++
++def build_gdn_replay(capture, args, kwargs, inner, resolver):
++    """Build during parent capture
++
++    Args are the existing fixed CUDA buffers for one BF16 128-token prefill.
++    Metadata values such as slot indices and initial-state flags remain GPU
++    inputs; the guard checks storage/ownership, not frozen request values.
++    """
++    if kwargs:
++        return None
++    signature, owner = _binding(args, resolver)
++    if signature is None:
++        return None
++    import torch
++    from tensorrt_llm._torch.pyexecutor.breakable_cuda_graph.breakable_cuda_graph import (
++        get_current_stream,
++    )
++    graph = torch.cuda.CUDAGraph()
++    # The enclosing break has ended its segment. Reuse its stream and pool;
++    # opening a new/default stream could lose dependencies under the BCG hook.
++    with torch.cuda.graph(graph, pool=capture._pool, stream=get_current_stream()):
++        inner(*args, **kwargs)
++    return _GuardedReplay(signature, owner, graph,
++                          lambda: _binding(args, resolver),
++                          lambda: inner(*args, **kwargs))

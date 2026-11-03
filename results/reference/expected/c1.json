@@ -1,0 +1,235 @@
+{
+  "effects": {
+    "mean_ttft_ms": {
+      "candidate_over_baseline_change_percent": -35.36093075932904,
+      "paired_t95_ratio_change_percent": [
+        -39.61013524525265,
+        -30.812740030655583
+      ],
+      "per_pair_change_percent": [
+        -32.44159858207543,
+        -39.77729652661013,
+        -31.052688134900908,
+        -37.12919980466272,
+        -36.01627316880766
+      ]
+    },
+    "p50_ttft_ms": {
+      "candidate_over_baseline_change_percent": -35.32989736539617,
+      "paired_t95_ratio_change_percent": [
+        -40.23053863358088,
+        -30.02744078399987
+      ],
+      "per_pair_change_percent": [
+        -30.82727655593147,
+        -40.711446601334735,
+        -31.510102677781493,
+        -36.764677806348175,
+        -36.31666901915291
+      ]
+    },
+    "p95_ttft_ms": {
+      "candidate_over_baseline_change_percent": -35.2593856368232,
+      "paired_t95_ratio_change_percent": [
+        -38.28390296825079,
+        -32.086645952912754
+      ],
+      "per_pair_change_percent": [
+        -34.56354279028323,
+        -38.60610174386061,
+        -32.577040331715246,
+        -36.867838319601354,
+        -33.49096897561109
+      ]
+    },
+    "p99_ttft_ms": {
+      "candidate_over_baseline_change_percent": -36.38245150374565,
+      "paired_t95_ratio_change_percent": [
+        -40.38709131616412,
+        -32.10879042762302
+      ],
+      "per_pair_change_percent": [
+        -33.878747844849556,
+        -37.40464778425589,
+        -33.63359643077835,
+        -41.50728820209784,
+        -35.14380720809308
+      ]
+    },
+    "mean_tpot_ms": {
+      "candidate_over_baseline_change_percent": 0.21965484234439422,
+      "paired_t95_ratio_change_percent": [
+        -0.4800702904864184,
+        0.9242997461491638
+      ],
+      "per_pair_change_percent": [
+        0.527513715202832,
+        -0.03254911615586664,
+        1.0380016389274438,
+        -0.4112304734535943,
+        -0.017074636637581797
+      ]
+    },
+    "p50_tpot_ms": {
+      "candidate_over_baseline_change_percent": 0.01854606421757077,
+      "paired_t95_ratio_change_percent": [
+        -0.6477998667215495,
+        0.6893611151065612
+      ],
+      "per_pair_change_percent": [
+        0.40076596693334743,
+        -0.33534372434402826,
+        0.739609835915167,
+        -0.569747370404039,
+        -0.13675397288979152
+      ]
+    },
+    "p95_tpot_ms": {
+      "candidate_over_baseline_change_percent": 0.6806068833530174,
+      "paired_t95_ratio_change_percent": [
+        -1.1486293231762421,
+        2.5436929502976375
+      ],
+      "per_pair_change_percent": [
+        1.403635240010015,
+        0.6753426319655365,
+        2.777020293098187,
+        -0.9514357350495994,
+        -0.45756144568200874
+      ]
+    },
+    "p99_tpot_ms": {
+      "candidate_over_baseline_change_percent": 0.8333173051101532,
+      "paired_t95_ratio_change_percent": [
+        -0.35835776806513725,
+        2.0392443461195526
+      ],
+      "per_pair_change_percent": [
+        1.757041347723698,
+        0.2673626639067672,
+        1.92505788540549,
+        -0.2963525259374822,
+        0.531971631881123
+      ]
+    },
+    "mean_e2el_ms": {
+      "candidate_over_baseline_change_percent": -2.0519627446861413,
+      "paired_t95_ratio_change_percent": [
+        -3.0075726535494534,
+        -1.0869377678334906
+      ],
+      "per_pair_change_percent": [
+        -1.527893156422755,
+        -2.6777395321167408,
+        -0.9627333223764967,
+        -2.730462296071978,
+        -2.3487574652795606
+      ]
+    },
+    "p50_e2el_ms": {
+      "candidate_over_baseline_change_percent": -2.193297171195129,
+      "paired_t95_ratio_change_percent": [
+        -3.1656367749654737,
+        -1.211194046773927
+      ],
+      "per_pair_change_percent": [
+        -1.7630924287708183,
+        -2.873692478891876,
+        -1.0056764203829616,
+        -2.700073069406761,
+        -2.6112648619845302
+      ]
+    },
+    "p95_e2el_ms": {
+      "candidate_over_baseline_change_percent": -1.7182278492896406,
+      "paired_t95_ratio_change_percent": [
+        -3.323350572737656,
+        -0.08645526806735843
+      ],
+      "per_pair_change_percent": [
+        -1.2574475970522636,
+        -2.1367927891720595,
+        0.3071529425770825,
+        -3.11655230209632,
+        -2.3528412269133603
+      ]
+    },
+    "p99_e2el_ms": {
+      "candidate_over_baseline_change_percent": -0.6402690331189101,
+      "paired_t95_ratio_change_percent": [
+        -1.5811170996384547,
+        0.30957319242974796
+      ],
+      "per_pair_change_percent": [
+        -0.27926187415190373,
+        -1.5302140058733982,
+        0.3849610381781776,
+        -1.2215468861932477,
+        -0.5436125103314926
+      ]
+    },
+    "mean_itl_ms": {
+      "candidate_over_baseline_change_percent": 0.21965695331098806,
+      "paired_t95_ratio_change_percent": [
+        -0.48007407515671446,
+        0.9243078358446014
+      ],
+      "per_pair_change_percent": [
+        0.5275146839872402,
+        -0.03255143414412354,
+        1.0380150908197772,
+        -0.4112271891821506,
+        -0.01707936061714488
+      ]
+    },
+    "p95_itl_ms": {
+      "candidate_over_baseline_change_percent": 0.29311812319235964,
+      "paired_t95_ratio_change_percent": [
+        -1.035695955088972,
+        1.639774461586361
+      ],
+      "per_pair_change_percent": [
+        0.39975856094900397,
+        -0.14397944227684256,
+        2.127127373498783,
+        -0.3209955422891597,
+        -0.5730911075685574
+      ]
+    },
+    "p99_itl_ms": {
+      "candidate_over_baseline_change_percent": 0.40864199900738424,
+      "paired_t95_ratio_change_percent": [
+        -1.8566069742724491,
+        2.726175214279954
+      ],
+      "per_pair_change_percent": [
+        -0.19731002697714883,
+        -0.16479605343944215,
+        3.730927255032701,
+        -0.4547407408570292,
+        -0.8025133933208695
+      ]
+    },
+    "output_throughput": {
+      "candidate_over_baseline_change_percent": 2.094788588576199,
+      "paired_t95_ratio_change_percent": [
+        1.0967339974280403,
+        3.1026962474499413
+      ],
+      "per_pair_change_percent": [
+        1.54936538320527,
+        2.752264071810462,
+        0.9706378090844847,
+        2.8099662871679643,
+        2.404476262278843
+      ]
+    }
+  },
+  "acceptance": {
+    "primary_p95_point_reduction_at_least_10": true,
+    "primary_paired_CI_excludes_zero": true,
+    "secondary_latency_point_estimates_within_5_percent": true,
+    "output_throughput_point_regression_within_5_percent": true,
+    "boundary": "Five independent process pairs; t interval over log ratios, p99 still limited by finite tails."
+  }
+}

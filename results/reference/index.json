@@ -1,0 +1,431 @@
+{
+  "schema": 1,
+  "campaigns": [
+    {
+      "name": "c1",
+      "preset": "c1",
+      "snapshot": "initial",
+      "effect_method": "log_ratio",
+      "runs": [
+        {
+          "pair": 0,
+          "variant": "baseline",
+          "file": "results/reference/raw/c1-0-baseline.json.gz"
+        },
+        {
+          "pair": 0,
+          "variant": "candidate",
+          "file": "results/reference/raw/c1-0-candidate.json.gz"
+        },
+        {
+          "pair": 1,
+          "variant": "baseline",
+          "file": "results/reference/raw/c1-1-baseline.json.gz"
+        },
+        {
+          "pair": 1,
+          "variant": "candidate",
+          "file": "results/reference/raw/c1-1-candidate.json.gz"
+        },
+        {
+          "pair": 2,
+          "variant": "baseline",
+          "file": "results/reference/raw/c1-2-baseline.json.gz"
+        },
+        {
+          "pair": 2,
+          "variant": "candidate",
+          "file": "results/reference/raw/c1-2-candidate.json.gz"
+        },
+        {
+          "pair": 3,
+          "variant": "baseline",
+          "file": "results/reference/raw/c1-3-baseline.json.gz"
+        },
+        {
+          "pair": 3,
+          "variant": "candidate",
+          "file": "results/reference/raw/c1-3-candidate.json.gz"
+        },
+        {
+          "pair": 4,
+          "variant": "baseline",
+          "file": "results/reference/raw/c1-4-baseline.json.gz"
+        },
+        {
+          "pair": 4,
+          "variant": "candidate",
+          "file": "results/reference/raw/c1-4-candidate.json.gz"
+        }
+      ],
+      "expected": "results/reference/expected/c1.json"
+    },
+    {
+      "name": "c8-short",
+      "preset": "c8-short",
+      "snapshot": "lifecycle",
+      "effect_method": "percent",
+      "runs": [
+        {
+          "pair": 0,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-short-0-baseline.json.gz"
+        },
+        {
+          "pair": 0,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-short-0-candidate.json.gz"
+        }
+      ],
+      "expected": "results/reference/expected/c8-short.json"
+    },
+    {
+      "name": "c8-long-regression",
+      "preset": "c8-long",
+      "snapshot": "lifecycle",
+      "effect_method": "percent",
+      "runs": [
+        {
+          "pair": 0,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-long-regression-0-baseline.json.gz"
+        },
+        {
+          "pair": 0,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-long-regression-0-candidate.json.gz"
+        },
+        {
+          "pair": 1,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-long-regression-1-baseline.json.gz"
+        },
+        {
+          "pair": 1,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-long-regression-1-candidate.json.gz"
+        },
+        {
+          "pair": 2,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-long-regression-2-baseline.json.gz"
+        },
+        {
+          "pair": 2,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-long-regression-2-candidate.json.gz"
+        },
+        {
+          "pair": 3,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-long-regression-3-baseline.json.gz"
+        },
+        {
+          "pair": 3,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-long-regression-3-candidate.json.gz"
+        },
+        {
+          "pair": 4,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-long-regression-4-baseline.json.gz"
+        },
+        {
+          "pair": 4,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-long-regression-4-candidate.json.gz"
+        }
+      ],
+      "expected": "results/reference/expected/c8-long-regression.json"
+    },
+    {
+      "name": "c8-cohort",
+      "preset": "c8-cohort",
+      "snapshot": "lifecycle",
+      "effect_method": "percent",
+      "runs": [
+        {
+          "pair": 0,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-cohort-0-baseline.json.gz"
+        },
+        {
+          "pair": 0,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-cohort-0-candidate.json.gz"
+        },
+        {
+          "pair": 1,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-cohort-1-candidate.json.gz"
+        },
+        {
+          "pair": 1,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-cohort-1-baseline.json.gz"
+        },
+        {
+          "pair": 2,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-cohort-2-baseline.json.gz"
+        },
+        {
+          "pair": 2,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-cohort-2-candidate.json.gz"
+        },
+        {
+          "pair": 3,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-cohort-3-candidate.json.gz"
+        },
+        {
+          "pair": 3,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-cohort-3-baseline.json.gz"
+        },
+        {
+          "pair": 4,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-cohort-4-baseline.json.gz"
+        },
+        {
+          "pair": 4,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-cohort-4-candidate.json.gz"
+        }
+      ],
+      "expected": "results/reference/expected/c8-cohort.json"
+    },
+    {
+      "name": "c1-1024",
+      "preset": "c1-1024",
+      "snapshot": "prefill1024",
+      "runtime_config": "benchmarks/runtime-1024.yaml",
+      "capture_sizes": [
+        128,
+        1024
+      ],
+      "effect_method": "percent",
+      "runs": [
+        {
+          "pair": 0,
+          "variant": "baseline",
+          "file": "results/reference/raw/c1-1024-replay-0-baseline.json.gz"
+        },
+        {
+          "pair": 0,
+          "variant": "candidate",
+          "file": "results/reference/raw/c1-1024-replay-0-candidate.json.gz"
+        }
+      ],
+      "expected": "results/reference/expected/c1-1024-replay.json"
+    },
+    {
+      "name": "c8-1024",
+      "preset": "c8-1024",
+      "snapshot": "prefill1024",
+      "runtime_config": "benchmarks/runtime-1024.yaml",
+      "capture_sizes": [
+        128,
+        1024
+      ],
+      "effect_method": "percent",
+      "runs": [
+        {
+          "pair": 0,
+          "variant": "baseline",
+          "file": "results/reference/raw/c8-1024-replay-0-baseline.json.gz"
+        },
+        {
+          "pair": 0,
+          "variant": "candidate",
+          "file": "results/reference/raw/c8-1024-replay-0-candidate.json.gz"
+        }
+      ],
+      "expected": "results/reference/expected/c8-1024-replay.json"
+    }
+  ],
+  "files": {
+    "results/reference/raw/c1-0-baseline.json.gz": {
+      "sha256": "7517e43b3c8252150fb56020efc344bc2f133bd8c50d8d98cc0e235337cb0559",
+      "original_sha256": "2663ae58c4cf505ad923bce4c4dc475c4203ac082551ec1fbf0851776e0e6424",
+      "original_bytes": 671557
+    },
+    "results/reference/raw/c1-0-candidate.json.gz": {
+      "sha256": "966c62b24068bc466464593bfd6a8a0243cdbde7d3fdc132eb673aaca0f77f97",
+      "original_sha256": "8d44c90771418f31c0a071d5dd5a00a7e4fef1e14d0b8edb091ed87e5279541e",
+      "original_bytes": 671700
+    },
+    "results/reference/raw/c1-1-baseline.json.gz": {
+      "sha256": "6049cb6b85f299aeb99030f355d86c3795f93e0cd54193f0d3d48270b111d929",
+      "original_sha256": "33509fd1bf8fb32f1bcda370642bcef0e98d17355649bdd061153c6599bf5d95",
+      "original_bytes": 671496
+    },
+    "results/reference/raw/c1-1-candidate.json.gz": {
+      "sha256": "cf9a4032611a6ed302a70d83227912dd2f26a3268496f4b5b5112312f19a2438",
+      "original_sha256": "5ebc95ffeb036cc145170b0497519238a99232d9e5c36b37097d47d64e81521d",
+      "original_bytes": 671540
+    },
+    "results/reference/raw/c1-2-baseline.json.gz": {
+      "sha256": "a681bc16a3550b46e92f61ca9b20f5d06d625c295a58ad7f14865dfb74a56213",
+      "original_sha256": "b752eb55bc3516e79c2a67e0f14bfdd590ab3a10955dd1304c2a155a7df4e7f1",
+      "original_bytes": 671583
+    },
+    "results/reference/raw/c1-2-candidate.json.gz": {
+      "sha256": "676ccebeefc699dedfa4abb2a145f561bf32d38c49b4ec2a9e2e3ef7f6284f9c",
+      "original_sha256": "f00035e460599abcfed1c097d0df8cdc2dc6252e918eb4948b33f23c80b4ae20",
+      "original_bytes": 671298
+    },
+    "results/reference/raw/c1-3-baseline.json.gz": {
+      "sha256": "864707bdc2555bc136e5d5d688081000efa25133b5aa496ca9e566f0bd21203d",
+      "original_sha256": "12948c1506a258e3a177147c89a7b01b30da13146dcb624974ca69256552ea22",
+      "original_bytes": 671780
+    },
+    "results/reference/raw/c1-3-candidate.json.gz": {
+      "sha256": "f7750c8f4bd4c8831f8cdcab3d8fd068dd836832891a33c834459ad6043da77a",
+      "original_sha256": "ab715cc8845bebf21dee4577c1320458327575e59bceaf94b3e3867cb640def8",
+      "original_bytes": 671662
+    },
+    "results/reference/raw/c1-4-baseline.json.gz": {
+      "sha256": "76143cb301fdc70f29ce9c45d5d85ce68d7b03d03fcb07ae1b5f8317f160997c",
+      "original_sha256": "a4870000a72b07cb394e07dac31e23d5d2c7cc960e9b5ee379fd3f3821558c7c",
+      "original_bytes": 671670
+    },
+    "results/reference/raw/c1-4-candidate.json.gz": {
+      "sha256": "53a88141b284d4640dda3aa9ab57d8d0ae04c6f76c3c1b3b0deeaa83d50208c0",
+      "original_sha256": "1a15cc913bb831c34d57f99f9f7d3fc3bb68b2d9601fbfe4d9c5f06dc5f7b7c1",
+      "original_bytes": 671851
+    },
+    "results/reference/raw/c8-short-0-baseline.json.gz": {
+      "sha256": "9bcd067b5833eb00d3e5e5f9c3787dacb43d804b18e806bd0cfaf077ceef0f08",
+      "original_sha256": "f3534df10c36c5cc576f32551e710ee9a800fd10e4520dd255ccd2f71294858e",
+      "original_bytes": 168651
+    },
+    "results/reference/raw/c8-short-0-candidate.json.gz": {
+      "sha256": "1f889a49862331c837efd28f058cf38acd619e7d3f8b0c26f2c936c4a31c5e58",
+      "original_sha256": "b6d01edfed15679e8c8d58394acbf5de536f21940486df1753cefffb24637f49",
+      "original_bytes": 168592
+    },
+    "results/reference/raw/c8-long-regression-0-baseline.json.gz": {
+      "sha256": "5c2df7278134a8fbdcee7a4838f02b39ba014127846f2a27dd71a86bb17cd701",
+      "original_sha256": "7e256851327d92487c33166fe9010bd7b454dd3ac363cf6ba3a44599d70ade81",
+      "original_bytes": 668855
+    },
+    "results/reference/raw/c8-long-regression-0-candidate.json.gz": {
+      "sha256": "969cbf4e0cecd1f183b428e98d786f196af563b2cc2f0bfa4d2a0cd3a15020c4",
+      "original_sha256": "82ea93fc014a03724987772530f3770fc81745d85f36d5edcbae93b00be57bb9",
+      "original_bytes": 668812
+    },
+    "results/reference/raw/c8-long-regression-1-baseline.json.gz": {
+      "sha256": "1f54b5b7eb329554a18a97a6742aedf8fd8e1045ead53f4a6edfd5151344e5cb",
+      "original_sha256": "a6da27df93386e0e93601f912cd4b18072af4e2a820ef37169d7b389c033953d",
+      "original_bytes": 669132
+    },
+    "results/reference/raw/c8-long-regression-1-candidate.json.gz": {
+      "sha256": "9092189d80c2ad19cc18578b265a820958adaa43ef80cc5f66c39662b6c22877",
+      "original_sha256": "215994025d10aad6acee85d29ebd7fe7fcc13825b49dfd77aa8129ed5d0470bc",
+      "original_bytes": 668969
+    },
+    "results/reference/raw/c8-long-regression-2-baseline.json.gz": {
+      "sha256": "12cbea6a2b41bbb916464c264ca42ec9fc51d884057d8dbf842e5ea32bc0eb46",
+      "original_sha256": "c490f96cf28052987cc5bb8a97825d6b10a4407be94579a4b76f507db5d5aa1b",
+      "original_bytes": 668915
+    },
+    "results/reference/raw/c8-long-regression-2-candidate.json.gz": {
+      "sha256": "763dc1d32dc4a7517e1f49cc042fa89e9d40500570fa0595f6b84b6e2c42013e",
+      "original_sha256": "dde72d5e337a613e94a4265b7395fd3fc3cb60ad12f8a3063b33e3f3a4de8d4e",
+      "original_bytes": 669322
+    },
+    "results/reference/raw/c8-long-regression-3-baseline.json.gz": {
+      "sha256": "d980a990eca5d58806bf90702a9d3051e93d9430f9010b89ac23fa70fe4a3445",
+      "original_sha256": "522cc600d1aa08c77857fa437794bce4401721767a673bbab9ea1c9bac3049f2",
+      "original_bytes": 669144
+    },
+    "results/reference/raw/c8-long-regression-3-candidate.json.gz": {
+      "sha256": "082322248c47f557be1006a680c77b254d7e5c477d2c8d5673d9327a48ececfa",
+      "original_sha256": "632d659f31500d0fdd0bef07c0a90abe29a2153ac9531ffa7b43f6738108e28c",
+      "original_bytes": 668792
+    },
+    "results/reference/raw/c8-long-regression-4-baseline.json.gz": {
+      "sha256": "e1638b55cd6c0d18ee7aaa045c9a3be5ac66a0dd8cde78045d5cc377a94a762a",
+      "original_sha256": "ae7dfe7b0f7c88677ae2885ca83aff92576f6d5cab01ba2b2bc045474fbb0292",
+      "original_bytes": 668941
+    },
+    "results/reference/raw/c8-long-regression-4-candidate.json.gz": {
+      "sha256": "92b804bb55c63619719bc0753f4e988857dca3aa0911c14eaa57561e75885401",
+      "original_sha256": "b4e7059cb4fb277315a93975aa34b2dc1cceff9b71f1d9f33f40b77cf217826d",
+      "original_bytes": 668860
+    },
+    "results/reference/raw/c8-cohort-0-baseline.json.gz": {
+      "sha256": "708b5a14012cfc05ff6d34b9eb91cbb061bf54c3f6dd86df30d7b8ef7dbce35a",
+      "original_sha256": "6a6aff65a3e9aaeec8cfa7ce5ffe0c77a92255c4433717d27e2286ffe73d30a1",
+      "original_bytes": 668719
+    },
+    "results/reference/raw/c8-cohort-0-candidate.json.gz": {
+      "sha256": "5e35839f4d673e341fe66113476f188a84ec1fe2c22b38edd68b8405cebacfbf",
+      "original_sha256": "5abce996cab51da9e98671241f9832fe57e94fcbc418f258ff24279b95e49824",
+      "original_bytes": 668580
+    },
+    "results/reference/raw/c8-cohort-1-candidate.json.gz": {
+      "sha256": "81278d68fa8173f6428122a8fb24a918639ae762a05784cf46fbe305337b1c3e",
+      "original_sha256": "abb46f0d664b3269acd12487b5ab8a40bec1ef903560ad00a9f25d60e6b7ffcc",
+      "original_bytes": 669108
+    },
+    "results/reference/raw/c8-cohort-1-baseline.json.gz": {
+      "sha256": "685a6493e62ea97a84be474f669a2208026aaa615a1eec5f585433fad96e71fc",
+      "original_sha256": "083a5f877e7fd6ff5f5dec3bce3bb395e19580dd54f9e82684c2f098c1ffb330",
+      "original_bytes": 668680
+    },
+    "results/reference/raw/c8-cohort-2-baseline.json.gz": {
+      "sha256": "56f3e8810bd5b11c83ae6cfde4c3fb52b9b8cb6fa6868a258088ff17534383c3",
+      "original_sha256": "18b6eee0a77f9c1f798db3f970a966825023614a6bbab65bd5254b9fb13c7e73",
+      "original_bytes": 668993
+    },
+    "results/reference/raw/c8-cohort-2-candidate.json.gz": {
+      "sha256": "9ff4c1255f97baabb44314dc51d945d833f4bd601cfa8e92dc3e46290f3f456c",
+      "original_sha256": "4b56997a4c7a75eb5648c2201ac39ff8156107e7eac3dbbc87373b4747dd204d",
+      "original_bytes": 669127
+    },
+    "results/reference/raw/c8-cohort-3-candidate.json.gz": {
+      "sha256": "c1d177698d84005aaef935eb014241ab5c0b3744628bdc31853ebc932fc905d9",
+      "original_sha256": "c63688d17e838d56994b291bf9822365ef8573a35600d8d85bc8fd75eda9f56b",
+      "original_bytes": 668900
+    },
+    "results/reference/raw/c8-cohort-3-baseline.json.gz": {
+      "sha256": "82d4474ac475f8abf67e3357adbb71d30551e53b4cee76f94958f17c81b3ac3b",
+      "original_sha256": "526a5160e3270b8c236812191a3d9c3420551e872560133c3196b9294358b676",
+      "original_bytes": 668547
+    },
+    "results/reference/raw/c8-cohort-4-baseline.json.gz": {
+      "sha256": "ef61d511fcaf10b1e47eaf30a62220f81f5530870200ca617565d42446686de4",
+      "original_sha256": "b08bd233a8cc6dec4886da7059e50c8224026e2e50af6552ec68f5e604251880",
+      "original_bytes": 669470
+    },
+    "results/reference/raw/c8-cohort-4-candidate.json.gz": {
+      "sha256": "d15ce4630789ddab2bd5302382e57b9842a825f1326a3ac73116b0c5e7ae3541",
+      "original_sha256": "9f3fa500011c54dcf920140d7fdd732a68cc9dda3602e374e393f422e008414b",
+      "original_bytes": 668878
+    },
+    "results/reference/raw/c1-1024-replay-0-baseline.json.gz": {
+      "sha256": "cd62051c05e25a9cd20b12adabb4287bf4e896c162c3ef1762781acf844de78a",
+      "original_sha256": "83d6aedc6920ee0eac3469ffe2feee414de4104de56f593a467e1ca26b06c52b",
+      "original_bytes": 684815
+    },
+    "results/reference/raw/c1-1024-replay-0-candidate.json.gz": {
+      "sha256": "c9d15bf28efa615f243dbb2659761335c5b6dad6e68f9a31b766c8a851757cbc",
+      "original_sha256": "4bdd85d9604861bbe0cd2b068fcc369d09f9ba3d57092e8a46608b63657a1189",
+      "original_bytes": 684939
+    },
+    "results/reference/raw/c8-1024-replay-0-baseline.json.gz": {
+      "sha256": "a7161226a02274e1879c0e294c648bb5ccaec3016cd8e880c75d105fd264c3ee",
+      "original_sha256": "6c3a97de9f134c84c3196cc9b43043a15f0b024082af707fefacd03b40213cd0",
+      "original_bytes": 682668
+    },
+    "results/reference/raw/c8-1024-replay-0-candidate.json.gz": {
+      "sha256": "f3b4926a9e2acbb23839b698470d6b5ff340946376c28cac7a158c306e837eda",
+      "original_sha256": "67a30de6b93b41ab76bfdc16435743bbf3d1306bf5b1b0835deaf8a953199bf1",
+      "original_bytes": 682802
+    }
+  }
+}

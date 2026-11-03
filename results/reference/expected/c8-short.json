@@ -1,0 +1,27 @@
+{
+  "batched": {
+    "effects": {
+      "mean_ttft_ms": -21.572897722334115,
+      "p50_ttft_ms": -23.72267856971353,
+      "p95_ttft_ms": -29.36035417038274,
+      "p99_ttft_ms": -28.715748937858333,
+      "mean_tpot_ms": 1.3654995191191954,
+      "p50_tpot_ms": 1.5558192210408661,
+      "p95_tpot_ms": 3.1411164611015563,
+      "p99_tpot_ms": 3.4090298558993037,
+      "mean_e2el_ms": -1.3196395838593,
+      "p50_e2el_ms": -2.0602593958677473,
+      "p95_e2el_ms": 0.4467413901389383,
+      "p99_e2el_ms": 0.7571976402108938,
+      "mean_itl_ms": 1.365498654951991,
+      "p95_itl_ms": 2.090876551201659,
+      "p99_itl_ms": 8.551347651278874,
+      "output_throughput": 1.2808818536825362
+    },
+    "decoded_output_agreement": 48,
+    "warmup_output_agreement": false,
+    "requests_per_arm": 50,
+    "independent_pairs": 1,
+    "non_regression_point_guards_pass": false
+  }
+}

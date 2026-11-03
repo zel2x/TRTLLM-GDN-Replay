@@ -1,0 +1,21 @@
+.cache/
+artifacts/
+.venv/
+__pycache__/
+*.pyc
+*.nsys-rep
+*.sqlite
+.DS_Store
+
+# Build outputs
+/build/
+**/build/
+/build-*/
+/build_*/
+/cmake-build-*/
+
+# Profiler report files
+*-rep
+*.rep
+*.nsys-rep
+*.ncu-rep

@@ -1,0 +1,103 @@
+{
+  "pairs": 1,
+  "effect_method": "percent",
+  "effects": {
+    "mean_ttft_ms": {
+      "change_percent": -1.1769414832583314,
+      "per_pair_change_percent": [
+        -1.1769414832583314
+      ]
+    },
+    "p50_ttft_ms": {
+      "change_percent": -0.5249762444991757,
+      "per_pair_change_percent": [
+        -0.5249762444991757
+      ]
+    },
+    "p95_ttft_ms": {
+      "change_percent": -0.3412908567920758,
+      "per_pair_change_percent": [
+        -0.3412908567920758
+      ]
+    },
+    "p99_ttft_ms": {
+      "change_percent": 1.6121691881186395,
+      "per_pair_change_percent": [
+        1.6121691881186395
+      ]
+    },
+    "mean_tpot_ms": {
+      "change_percent": -1.0644763700519588,
+      "per_pair_change_percent": [
+        -1.0644763700519588
+      ]
+    },
+    "p50_tpot_ms": {
+      "change_percent": -1.4168786781273979,
+      "per_pair_change_percent": [
+        -1.4168786781273979
+      ]
+    },
+    "p95_tpot_ms": {
+      "change_percent": -1.620524079567176,
+      "per_pair_change_percent": [
+        -1.620524079567176
+      ]
+    },
+    "p99_tpot_ms": {
+      "change_percent": -0.4334201188643694,
+      "per_pair_change_percent": [
+        -0.4334201188643694
+      ]
+    },
+    "mean_e2el_ms": {
+      "change_percent": -1.0892596519022413,
+      "per_pair_change_percent": [
+        -1.0892596519022413
+      ]
+    },
+    "p50_e2el_ms": {
+      "change_percent": -0.8859371309347885,
+      "per_pair_change_percent": [
+        -0.8859371309347885
+      ]
+    },
+    "p95_e2el_ms": {
+      "change_percent": -1.2068416955964834,
+      "per_pair_change_percent": [
+        -1.2068416955964834
+      ]
+    },
+    "p99_e2el_ms": {
+      "change_percent": -1.8976009301573504,
+      "per_pair_change_percent": [
+        -1.8976009301573504
+      ]
+    },
+    "mean_itl_ms": {
+      "change_percent": -1.0644769956054234,
+      "per_pair_change_percent": [
+        -1.0644769956054234
+      ]
+    },
+    "p95_itl_ms": {
+      "change_percent": -0.5014091103882623,
+      "per_pair_change_percent": [
+        -0.5014091103882623
+      ]
+    },
+    "p99_itl_ms": {
+      "change_percent": -3.4752007877524083,
+      "per_pair_change_percent": [
+        -3.4752007877524083
+      ]
+    },
+    "output_throughput": {
+      "change_percent": 1.1007250028203686,
+      "per_pair_change_percent": [
+        1.1007250028203686
+      ]
+    }
+  },
+  "profiled": false
+}
